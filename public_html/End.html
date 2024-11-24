@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endgame</title>
+  <style>
+    /* Make the body take the full screen */
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* Prevents scrolling if the content overflows */
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+      background-image: url('https://external-preview.redd.it/uJU664_zZmUQnBxqMG2X0vfDGc1jVKY6cMjYw00AlZA.png?format=pjpg&auto=webp&s=182e6bc3cb87909ecb6857df1af075c4bf3b0995');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Center the text container */
+    #text-container {
+      max-width: 600px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    }
+
+    /* Style the button */
+    #proceed-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    #proceed-btn:hover {
+      background-color: #666;
+    }
+
+    /* Hide the image initially */
+    #image-container {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Text container -->
+  <div id="text-container">
+    <p>You have wandered enough. You laughed at cat memes, raised and sang the Rick Astley anthem, skibidied, and watched your social credit aura rise and fall. You have seen it all. In hundreds, thousands of memes, you shaped your identity—sigma male, skibidi toilet, gyatt—it makes no difference. You have joined the majority: the brain-rotten gang. Perhaps there’s even comfort, a sense of belonging, in humming your favorite meme song within the solitude of a toilet cubicle.</p>
+    <p>But let’s be clear—you made your own choices. You are your own enemy. You chose the scroll over silence, the dopamine hit over meaning, the noise over thought.</p>
+    <p>And now, here you are. Remain on that toilet bowl, waiting for the next trendy meme to make you giggle like Peter Griffin—or stand up, go out, and touch some grass. The choice is yours.</p>
+    <button id="proceed-btn">Try again.</button>
+  </div>
+
+  <!-- Image container -->
+  <div id="image-container">
+    <img src="assets/endgame.jpg" alt="Endgame Image">
+  </div>
+
+  <script>
+    // JavaScript to handle the button click
+    const proceedButton = document.getElementById('proceed-btn');
+    const textContainer = document.getElementById('text-container');
+    const imageContainer = document.getElementById('image-container');
+
+    proceedButton.addEventListener('click', () => {
+      textContainer.style.display = 'none'; // Hide the text
+      imageContainer.style.display = 'block'; // Show the image
+    });
+  </script>
+</body>
+</html>

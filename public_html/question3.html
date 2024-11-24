@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game - Question</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      /* Question Page */
+#question-page {
+  display: none;
+  width: 80%;
+  max-width: 900px;
+  background: linear-gradient(90deg, #ea00d9, #0abdc6);;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  overflow: hidden;
+}
+
+/* Question/Answer Design */
+.left-section {
+  flex: 2;
+  padding: 20px;
+}
+
+.left-section h2 {
+  margin-bottom: 30px;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+button.option {
+  flex: 1 1 calc(50% - 20px);
+  padding: 15px;
+  font-size: 1.1em;
+  background: #ba0000;
+  border-color: black 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button.option:hover {
+  transform: scale(1.05);
+}
+
+/* Stats Section */
+.right-section {
+  flex: 1;
+  background: #133e7c;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid #ddd;
+}
+
+.character {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.status {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.status-label {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #73ffdf, #ff73fa);
+}
+
+  </style>
+</head>
+<body>
+  <div id="question-page">
+    <div class="left-section">
+      <h2>What is this?</h2>
+      <p><img src="assets/skibidi.png" alt="Image for Question 2" style="width: 200px; height: 200px;"></p>
+      <div class="options-container">
+        <button class="option" onclick="checkAnswer(true, 'question4.html')">Weird Toilet man</button>
+        <button class="option" onclick="checkAnswer(false, 'question4.html')">Skibidi</button>
+        <button class="option" onclick="checkAnswer(true, 'question4.html')">Sigma Male</button>
+        <button class="option" onclick="checkAnswer(true, 'question4.html')">Creepy squidward man</button>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="status">
+        <div class="status-label">Health</div>
+        <div class="progress-bar" id="health-bar">
+          <div class="progress" id="health-progress"></div>
+        </div>
+      </div>
+      <div class="status">
+        <div class="status-label">Aura</div>
+        <div class="progress-bar" id="aura-bar">
+          <div class="progress" id="aura-progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Retrieve progress values from localStorage
+    let healthProgress = parseInt(localStorage.getItem('healthProgress')) || 50;
+    let auraProgress = parseInt(localStorage.getItem('auraProgress')) || 50;
+
+    // Set progress bar widths
+    document.getElementById('health-progress').style.width = healthProgress + '%';
+    document.getElementById('aura-progress').style.width = auraProgress + '%';
+
+    // Function to handle answer selection and navigate to the next page
+    function checkAnswer(isWrong, nextPage) {
+      if (isWrong) {
+        healthProgress += 10;
+        auraProgress -= 10;
+      } else {
+        healthProgress -= 10;
+        auraProgress += 10;
+      }
+
+      // Ensure progress stays within bounds
+      healthProgress = Math.max(0, Math.min(100, healthProgress));
+      auraProgress = Math.max(0, Math.min(100, auraProgress));
+
+      // Update localStorage with new values
+      localStorage.setItem('healthProgress', healthProgress);
+      localStorage.setItem('auraProgress', auraProgress);
+
+      // Navigate to the next page
+      window.location.href = nextPage;
+    }
+  </script>
+</body>
+
+</html>
