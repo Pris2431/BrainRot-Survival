@@ -1,5 +1,6 @@
 # Skibidi-Survival
-![image](https://github.com/user-attachments/assets/b04a97a4-a51c-4eb4-b294-2742b4e47c3e)
+![WhatsApp Image 2024-11-24 at 13 55 19_2b91bb7f](https://github.com/user-attachments/assets/33a78bba-5dc6-4b85-88ab-8d6c6b54605c)
+
 
 # BrainRot Survival - Readme
 
