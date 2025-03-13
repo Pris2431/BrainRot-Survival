@@ -2,6 +2,7 @@
 ![WhatsApp Image 2024-11-24 at 13 55 19_2b91bb7f](https://github.com/user-attachments/assets/33a78bba-5dc6-4b85-88ab-8d6c6b54605c)
 
 ## This game was awarded **1st Place in Counterspell Singapore 2024.**
+## Presentation Slides: https://www.canva.com/design/DAGXZKxqzQg/vnw2ChJc2IyA0z4spOAKdA/view?utm_content=DAGXZKxqzQg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9cc08e996d
 
 # BrainRot Survival - Readme
 
