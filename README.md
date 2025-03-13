@@ -1,12 +1,15 @@
-# Skibidi-Survival
+# BrainRot-Survival
 ![WhatsApp Image 2024-11-24 at 13 55 19_2b91bb7f](https://github.com/user-attachments/assets/33a78bba-5dc6-4b85-88ab-8d6c6b54605c)
 
+## This game was awarded **1st Place in Counterspell Singapore 2024.**
 
 # BrainRot Survival - Readme
 
 ## Overview
 
 Welcome to **BrainRot Survival**, a trivia-based game where your wits are your best weapon! Answer questions to survive, and manage your character's **Health** and **Aura** stats. Every correct answer boosts your stats, but get it wrong, and you’ll pay the price. Keep your stats balanced to avoid a total BrainRot! Can you survive the quiz and make it out on top?
+
+
 
 ## Features
 
@@ -77,6 +80,8 @@ You can easily modify the look of the game by editing the following:
 - **Power-ups & Effects**: Add items or power-ups to alter gameplay.
 - **Leaderboard**: Track scores and achievements for competitive play.
 - **Sound and Animations**: Make the game more immersive.
+  
+### Good luck surviving **BrainRot Survival**! 🎮💥
 
 ## Contributing
 
@@ -86,4 +91,5 @@ Feel free to fork the project, improve it, and submit pull requests. Contributio
 
 This project is open source under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code
 <hr>
-Good luck surviving **BrainRot Survival**! 🎮💥
+
+
